@@ -1,4 +1,4 @@
-# 🚀 Bhanu Prakash Peddi - Portfolio Website
+# 🚀 Shaifali Singh - Portfolio Website
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=netlify)](https://bhanuprakashpeddi.tech)
 [![React](https://img.shields.io/badge/React-18+-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
@@ -7,8 +7,6 @@
 > A modern, responsive portfolio website built with React.js, featuring smooth animations, interactive UI, and a fully functional contact form. Showcasing my journey as a Full-Stack Developer with a passion for creating innovative web solutions.
 
 ## ✨ Live Preview
-
-🌐 **[Visit My Portfolio](https://bhanuprakashpeddi.tech)**
 
 ---
 
@@ -30,12 +28,14 @@ This portfolio represents more than just a collection of my work—it's a reflec
 ## 🛠️ Built With
 
 ### Core Technologies
+
 - **React 18+** - Modern React with hooks and functional components
 - **JavaScript (ES6+)** - Latest JavaScript features and best practices
 - **CSS3** - Custom styling with modern CSS features
 - **HTML5** - Semantic markup for better accessibility
 
 ### Libraries & Tools
+
 - **Framer Motion** - Smooth animations and transitions
 - **AnimeJS** - Advanced animation effects
 - **React Icons** - Beautiful icon library
@@ -43,6 +43,7 @@ This portfolio represents more than just a collection of my work—it's a reflec
 - **React Router** - Single-page application routing
 
 ### Development & Deployment
+
 - **Create React App** - Project scaffolding and build tools
 - **NPM** - Package management
 - **Git** - Version control
@@ -53,36 +54,42 @@ This portfolio represents more than just a collection of my work—it's a reflec
 ## 🎨 Key Features
 
 ### 🏠 **Interactive Homepage**
+
 - Dynamic typing animation with my name
 - Floating background elements
 - Smooth scroll navigation
 - Professional introduction
 
 ### 💼 **Projects Showcase**
+
 - Detailed project cards with descriptions
 - Live demo and GitHub links
 - Technology stack highlights
 - Responsive grid layout
 
 ### 🛠️ **Skills Section**
+
 - Interactive skill cards
 - Technology logos and descriptions
 - Organized by categories
 - Hover effects and animations
 
 ### 👨‍💻 **About Me**
+
 - Personal story and background
 - Professional journey
 - Tech stack expertise
 - Career highlights
 
 ### 📧 **Contact Form**
+
 - Fully functional email integration
 - Form validation and error handling
 - Success/error feedback
 - Professional email templates
 
 ### 🎯 **Additional Features**
+
 - Resume download functionality
 - Social media integration
 - SEO optimized
@@ -94,6 +101,7 @@ This portfolio represents more than just a collection of my work—it's a reflec
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - **Node.js** (v14 or higher)
 - **npm** or **yarn**
 - Modern web browser
@@ -101,17 +109,20 @@ This portfolio represents more than just a collection of my work—it's a reflec
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
-   git clone https://github.com/bhanuprakashpeddi-1432/portfolio.git
-   cd portfolio/tech-portfolio
+   git clone https://github.com/shaifali-singh1208/my-portfolio.git
+   cd my-portfolio/
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Start the development server**
+
    ```bash
    npm start
    ```
@@ -124,11 +135,13 @@ This portfolio represents more than just a collection of my work—it's a reflec
 To make the contact form functional:
 
 1. **Install EmailJS**
+
    ```bash
    npm install @emailjs/browser
    ```
 
 2. **Create EmailJS Account**
+
    - Visit [EmailJS.com](https://www.emailjs.com/)
    - Create a free account (200 emails/month)
 
@@ -136,9 +149,9 @@ To make the contact form functional:
    - Create email service and template
    - Update the configuration in `src/components/Contact.js`:
    ```javascript
-   const EMAILJS_SERVICE_ID = 'your_service_id';
-   const EMAILJS_TEMPLATE_ID = 'your_template_id';
-   const EMAILJS_PUBLIC_KEY = 'your_public_key';
+   const EMAILJS_SERVICE_ID = "your_service_id";
+   const EMAILJS_TEMPLATE_ID = "your_template_id";
+   const EMAILJS_PUBLIC_KEY = "your_public_key";
    ```
 
 Detailed setup instructions are available in `EMAILJS_SETUP.md`.
@@ -177,13 +190,16 @@ tech-portfolio/
 ## 🎨 Customization Guide
 
 ### 🖼️ **Personal Information**
+
 1. **Update personal details** in each component
-2. **Replace profile image** in `src/styles/img.png`
+2. **Replace profile image** in `src/styles/img.jpeg`
 3. **Update resume** in `public/resume.pdf`
 4. **Modify social links** in contact section
 
 ### 🎯 **Projects**
+
 Add your projects in `src/components/Projects.js`:
+
 ```javascript
 {
   title: "Your Project Name",
@@ -196,7 +212,9 @@ Add your projects in `src/components/Projects.js`:
 ```
 
 ### 🛠️ **Skills**
+
 Update your skills in `src/components/Skills.js`:
+
 ```javascript
 {
   name: "Your Technology",
@@ -206,6 +224,7 @@ Update your skills in `src/components/Skills.js`:
 ```
 
 ### 🎨 **Styling**
+
 - Modify colors in individual CSS files
 - Update animations in component files
 - Customize layouts and spacing
@@ -217,7 +236,7 @@ Update your skills in `src/components/Skills.js`:
 This portfolio is built with a mobile-first approach:
 
 - **📱 Mobile** (320px+) - Optimized for small screens
-- **📱 Tablet** (768px+) - Adapted for medium screens  
+- **📱 Tablet** (768px+) - Adapted for medium screens
 - **💻 Desktop** (1024px+) - Full-featured experience
 - **🖥️ Large Desktop** (1440px+) - Enhanced layout
 
@@ -246,17 +265,20 @@ This portfolio is built with a mobile-first approach:
 ## 🚀 Deployment
 
 ### Build for Production
+
 ```bash
 npm run build
 ```
 
 ### Deploy to Netlify
+
 1. Connect your GitHub repository
 2. Set build command: `npm run build`
 3. Set publish directory: `build`
 4. Deploy!
 
 ### Deploy to Vercel
+
 ```bash
 npm install -g vercel
 vercel --prod
@@ -284,9 +306,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 About Me
 
-Hi! I'm **Bhanu Prakash Peddi**, a passionate Full-Stack Developer from Vijayawada, India. I love creating web applications that not only function flawlessly but also provide exceptional user experiences.
+Hi! I'm **Shaifali Singh**, a passionate Full-Stack Developer from Vijayawada, India. I love creating web applications that not only function flawlessly but also provide exceptional user experiences.
 
 ### 🛠️ **My Tech Stack**
+
 - **Frontend:** React.js, JavaScript, HTML5, CSS3
 - **Backend:** Node.js, Express.js
 - **Databases:** MongoDB, PostgreSQL, MySQL
@@ -294,6 +317,7 @@ Hi! I'm **Bhanu Prakash Peddi**, a passionate Full-Stack Developer from Vijayawa
 - **Tools:** Git, Docker, VS Code
 
 ### 🌱 **Currently Learning**
+
 - Advanced React patterns
 - Cloud architecture
 - DevOps practices
@@ -305,17 +329,17 @@ Hi! I'm **Bhanu Prakash Peddi**, a passionate Full-Stack Developer from Vijayawa
 
 I'm always open to discussing new opportunities, collaborations, or just chatting about technology!
 
-- 📧 **Email:** [bhanuprakashpeddi5@gmail.com](mailto:bhanuprakashpeddi5@gmail.com)
-- 💼 **LinkedIn:** [bhanu-prakash-peddi](https://linkedin.com/in/bhanu-prakash-peddi)
-- 🐙 **GitHub:** [bhanuprakashpeddi-1432](https://github.com/bhanuprakashpeddi-1432)
-- 🌐 **Portfolio:** [bhanuprakashpeddi.tech](https://bhanuprakashpeddi.tech)
-- 📱 **Phone:** +91 9121086544
+- 📧 **Email:** [shaifalisingh1208@gmail.com](mailto:shaifalisingh1208@gmail.com)
+- 💼 **LinkedIn:** [shaifalisingh](https://www.linkedin.com/in/shaifali-singh-software-developer-ai)
+- 🐙 **GitHub:** [shaifalisingh](https://github.com/shaifali-singh1208)
+- 📱 **Phone:** +91 9753689935,
 
 ---
 
 ## ⭐ Show Your Support
 
 If you found this portfolio inspiring or helpful, please consider:
+
 - ⭐ **Starring the repository**
 - 🍴 **Forking for your own use**
 - 💬 **Sharing with others**
@@ -327,8 +351,6 @@ If you found this portfolio inspiring or helpful, please consider:
 
 ### 🎉 Thank you for visiting my portfolio!
 
-*Made with ❤️ by Bhanu Prakash Peddi*
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Now-brightgreen?style=for-the-badge)](https://bhanuprakashpeddi.tech)
+\_Made with ❤️ by Shaifali singh
 
 </div>
