@@ -50,7 +50,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); */
 }
 
 .full-image {
@@ -58,7 +58,7 @@
   height: auto;
   object-fit: contain;
   object-position: center;
-  border-radius: 15px;
+  border-radius: 50%;
   filter: contrast(120%) brightness(100%);
   z-index: 2;
   position: relative;
@@ -71,7 +71,9 @@
   transform: translate(-50%, -50%);
   width: 300px;
   height: 300px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
+    filter: blur(10px);
+
   background: rgba(0, 240, 255, 0.1);
   mix-blend-mode: overlay;
   z-index: 1;

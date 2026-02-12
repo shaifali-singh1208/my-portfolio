@@ -45,7 +45,7 @@ const About = () => {
     },
     {
       title: "Tech Stack",
-      content: "React, JavaScript, Node.js, Python, MongoDB, PostgreSQL, Git, AWS, and modern web technologies",
+      content: " Laravel,React, JavaScript, Node.js, MongoDB, MySQL, Git, AWS, and modern web technologies",
       icon: "💻"
     }
   ];
@@ -72,9 +72,7 @@ const About = () => {
             <h2 className="about-title">About Me</h2>
           </div>
           <p className="about-description">
-            I am a passionate full-stack developer with expertise in building dynamic,
-            responsive, and scalable web applications. I love turning complex problems
-            into simple, beautiful, and intuitive solutions.
+           I’m a passionate web developer who loves building dynamic, responsive websites and turning complex ideas into simple, elegant solutions.
           </p>
         </motion.div>
 

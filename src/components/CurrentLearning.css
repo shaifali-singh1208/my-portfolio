@@ -2,13 +2,12 @@
 .current-learning {
   padding: 80px 20px;
   background: linear-gradient(135deg, #0e0e23 0%, #1a1a3e 100%);
-  min-height: 100vh;
+  min-height: auto;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .current-learning::before {
@@ -105,7 +104,7 @@
 
 .learning-card:hover {
   border-color: rgba(0, 240, 255, 0.3);
-  box-shadow: 
+  box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.3),
     0 0 30px rgba(0, 240, 255, 0.15);
 }
@@ -226,8 +225,13 @@
 }
 
 @keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .skills-section {
@@ -282,7 +286,7 @@
   flex-shrink: 0;
 }
 
-.timeline-item > div {
+.timeline-item>div {
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -360,7 +364,7 @@
   filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.5));
 }
 
-.stat-item > div {
+.stat-item>div {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -478,12 +482,12 @@
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid var(--primary);
   }
-  
+
   .progress-bar {
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid var(--primary);
   }
-  
+
   .learning-summary {
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid var(--primary);
@@ -492,16 +496,17 @@
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
+
   .learning-card,
   .skill-tag,
   .progress-fill {
     transition: none;
   }
-  
+
   .progress-fill::after {
     animation: none;
   }
-  
+
   .learning-card:hover {
     transform: none;
   }

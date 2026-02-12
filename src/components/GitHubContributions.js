@@ -3,16 +3,14 @@ import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import "./GitHubContributions.css";
 
-const GitHubContributions = ({ username = "bhanuprakashpeddi-1432" }) => {
+const GitHubContributions = ({ username = "shaifali-singh1208" }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
 
+  // GitHub contributions image URL (full year)
   const contributionUrl = `https://ghchart.rshah.org/${username}`;
 
-  const handleImageLoad = () => {
-    setIsLoaded(true);
-  };
-
+  const handleImageLoad = () => setIsLoaded(true);
   const handleImageError = () => {
     setImageError(true);
     setIsLoaded(true);
@@ -28,6 +26,8 @@ const GitHubContributions = ({ username = "bhanuprakashpeddi-1432" }) => {
       viewport={{ once: true }}
     >
       <div className="contributions-container">
+        
+        {/* Section Header */}
         <motion.div
           className="section-header"
           initial={{ opacity: 0, y: 20 }}
@@ -41,6 +41,7 @@ const GitHubContributions = ({ username = "bhanuprakashpeddi-1432" }) => {
           <p>My coding journey throughout the year</p>
         </motion.div>
 
+        {/* Contributions Chart */}
         <motion.div
           className="contributions-chart-wrapper"
           initial={{ opacity: 0, scale: 0.95 }}
@@ -52,7 +53,7 @@ const GitHubContributions = ({ username = "bhanuprakashpeddi-1432" }) => {
               <img
                 src={contributionUrl}
                 alt={`${username}'s GitHub contribution chart`}
-                className={`contributions-chart ${isLoaded ? 'loaded' : ''}`}
+                className={`contributions-chart ${isLoaded ? "loaded" : ""}`}
                 onLoad={handleImageLoad}
                 onError={handleImageError}
               />
@@ -80,6 +81,7 @@ const GitHubContributions = ({ username = "bhanuprakashpeddi-1432" }) => {
           )}
         </motion.div>
 
+        {/* GitHub Profile Link */}
         <motion.div
           className="github-stats"
           initial={{ opacity: 0, y: 20 }}
@@ -87,13 +89,13 @@ const GitHubContributions = ({ username = "bhanuprakashpeddi-1432" }) => {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <a
-            href={`https://github.com/${username}`}
+            href={`https://github.com/${username}?tab=overview&from=2025-01-01&to=2025-12-31`}
             target="_blank"
             rel="noopener noreferrer"
             className="profile-link"
           >
             <FaExternalLinkAlt />
-            View Full GitHub Profile
+            View Full GitHub Profile (2025)
           </a>
         </motion.div>
       </div>

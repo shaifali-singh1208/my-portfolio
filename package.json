@@ -2,7 +2,6 @@
   "name": "tech-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bhanuprakashpeddi.tech/",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "animejs": "^3.2.1",

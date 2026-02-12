@@ -28,7 +28,7 @@ const Navigation = () => {
   const handleResumeDownload = () => {
     const link = document.createElement('a');
     link.href = '/resume.pdf';
-    link.download = 'Bhanu_Prakash_Peddi_Resume.pdf';
+    link.download = 'shaifali_singh.pdf';
     link.target = '_blank';
     document.body.appendChild(link);
     link.click();
@@ -42,9 +42,6 @@ const Navigation = () => {
     { name: 'Skills', id: 'skills' },
     { name: 'Projects', id: 'projects' },
     { name: 'GitHub', id: 'github-contributions' },
-    { name: 'Profiles', id: 'coding-profiles' },
-    { name: 'Certifications', id: 'certifications' },
-    { name: 'Learning', id: 'current-learning' },
     { name: 'Contact', id: 'contact' }
   ];
 
@@ -62,7 +59,7 @@ const Navigation = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <span>BP</span>
+          <span>Shaifali Singh</span>
         </motion.div>
 
         <div className={`nav-menu ${isOpen ? 'active' : ''}`}>

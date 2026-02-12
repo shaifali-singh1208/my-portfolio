@@ -1,29 +1,36 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaComments } from "react-icons/fa";
-import emailjs from '@emailjs/browser';
+import {
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaLinkedin,
+  FaGithub,
+  FaComments,
+} from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 const Contact = () => {
   const form = useRef();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState('');
+  const [submitStatus, setSubmitStatus] = useState("");
 
   // EmailJS configuration - Replace with your actual keys from https://emailjs.com
-  const EMAILJS_SERVICE_ID = 'service_rsmcrh6'; // Replace with your service ID from EmailJS
-  const EMAILJS_TEMPLATE_ID = 'template_6ncz4fr'; // Replace with your template ID from EmailJS
-  const EMAILJS_PUBLIC_KEY = '2ZF_fH7yO9nJqn7jC'; // Replace with your public key from EmailJS
+  const EMAILJS_SERVICE_ID = "service_rsmcrh6"; // Replace with your service ID from EmailJS
+  const EMAILJS_TEMPLATE_ID = "template_6ncz4fr"; // Replace with your template ID from EmailJS
+  const EMAILJS_PUBLIC_KEY = "2ZF_fH7yO9nJqn7jC"; // Replace with your public key from EmailJS
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus('');
+    setSubmitStatus("");
 
     try {
       // Send email using EmailJS
@@ -34,29 +41,28 @@ const Contact = () => {
         EMAILJS_PUBLIC_KEY
       );
 
-      console.log('Email sent successfully:', result.text);
-      setSubmitStatus('success');
-      
+      console.log("Email sent successfully:", result.text);
+      setSubmitStatus("success");
+
       // Clear form data
       setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       });
 
       // Hide success message after 5 seconds
       setTimeout(() => {
-        setSubmitStatus('');
+        setSubmitStatus("");
       }, 5000);
-
     } catch (error) {
-      console.error('Email sending failed:', error);
-      setSubmitStatus('error');
-      
+      console.error("Email sending failed:", error);
+      setSubmitStatus("error");
+
       // Hide error message after 5 seconds
       setTimeout(() => {
-        setSubmitStatus('');
+        setSubmitStatus("");
       }, 5000);
     } finally {
       setIsSubmitting(false);
@@ -64,10 +70,10 @@ const Contact = () => {
   };
 
   const handleResumeDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/resume.pdf';
-    link.download = 'Bhanu_Prakash_Peddi_Resume.pdf';
-    link.target = '_blank';
+    const link = document.createElement("a");
+    link.href = "/resume.pdf";
+    link.download = "shaifali_singh_Resume.pdf";
+    link.target = "_blank";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -77,36 +83,36 @@ const Contact = () => {
     {
       icon: <FaEnvelope />,
       title: "Email",
-      value: "bhanuprakashpeddi5@gmail.com",
-      link: "mailto:bhanuprakashpeddi@gmail.com"
+      value: "shaifalisingh1208@gmail.com",
+      link: "mailto:shaifalisingh1208@gmail@gmail.com",
     },
     {
       icon: <FaPhone />,
       title: "Phone",
-      value: "+91 9121086544",
-      link: "tel:+919121086544"
+      value: "+91 9753689935",
+      link: "tel:+919753689935",
     },
     {
       icon: <FaMapMarkerAlt />,
       title: "Location",
-      value: "Vijayawada, India",
-      link: "#"
-    }
+      value: "Indore, India",
+      link: "#",
+    },
   ];
 
   const socialLinks = [
     {
       icon: <FaLinkedin />,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/bhanu-prakash-peddi",
-      color: "#0077b5"
+      url: "https://www.linkedin.com/in/shaifali-singh-software-developer-ai/",
+      color: "#0077b5",
     },
     {
       icon: <FaGithub />,
       name: "GitHub",
-      url: "https://github.com/bhanuprakashpeddi-1432",
-      color: "#ffffff"
-    }
+      url: "https://github.com/shaifali-singh1208",
+      color: "#ffffff",
+    },
   ];
 
   return (
@@ -123,10 +129,13 @@ const Contact = () => {
           key={i}
           className="contact-circle"
           style={{
-            '--size': `${25 + i * 6}px`,
-            '--opacity': `${0.03 + i * 0.01}`,
-            '--delay': `${i * 0.4}s`,
-            '--color': i % 2 === 0 ? 'rgba(0, 240, 255, var(--opacity))' : 'rgba(255, 0, 255, var(--opacity))'
+            "--size": `${25 + i * 6}px`,
+            "--opacity": `${0.03 + i * 0.01}`,
+            "--delay": `${i * 0.4}s`,
+            "--color":
+              i % 2 === 0
+                ? "rgba(0, 240, 255, var(--opacity))"
+                : "rgba(255, 0, 255, var(--opacity))",
           }}
         />
       ))}
@@ -141,8 +150,8 @@ const Contact = () => {
           <FaComments className="section-icon" />
           <h2 className="contact-title">Get In Touch</h2>
           <p className="contact-description">
-            Have a project in mind or want to collaborate? I'd love to hear from you!
-            Let's create something amazing together.
+            Have a project in mind or want to collaborate? I'd love to hear from
+            you! Let's create something amazing together.
           </p>
         </motion.div>
 
@@ -185,7 +194,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-icon"
-                    style={{ '--social-color': social.color }}
+                    style={{ "--social-color": social.color }}
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 1 + index * 0.1, duration: 0.3 }}
@@ -196,7 +205,7 @@ const Contact = () => {
                   </motion.a>
                 ))}
               </div>
-              
+
               <motion.button
                 className="resume-download-btn"
                 onClick={handleResumeDownload}
@@ -220,48 +229,63 @@ const Contact = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             <form ref={form} className="contact-form" onSubmit={handleSubmit}>
+              {/* Hidden field to lock recipient */}
+              <input
+                type="hidden"
+                name="to_email"
+                value="shaifalisingh1208@gmail.com"
+              />
+
               <div className="form-group">
                 <input
                   type="text"
                   name="from_name"
                   placeholder="Your Name"
                   value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                   required
                   className="form-input"
                 />
               </div>
-              
+
               <div className="form-group">
                 <input
                   type="email"
                   name="from_email"
                   placeholder="Your Email"
                   value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   required
                   className="form-input"
                 />
               </div>
-              
+
               <div className="form-group">
                 <input
                   type="text"
                   name="subject"
                   placeholder="Subject"
                   value={formData.subject}
-                  onChange={(e) => setFormData({...formData, subject: e.target.value})}
+                  onChange={(e) =>
+                    setFormData({ ...formData, subject: e.target.value })
+                  }
                   required
                   className="form-input"
                 />
               </div>
-              
+
               <div className="form-group">
                 <textarea
                   name="message"
                   placeholder="Your Message"
                   value={formData.message}
-                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                   required
                   rows="6"
                   className="form-textarea"
@@ -275,39 +299,19 @@ const Contact = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </motion.button>
-
-              {submitStatus === 'success' && (
-                <motion.div
-                  className="success-message"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                >
-                  ✅ Thank you! Your message has been sent successfully.
-                </motion.div>
-              )}
-
-              {submitStatus === 'error' && (
-                <motion.div
-                  className="error-message"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                >
-                  ❌ Sorry, there was an error sending your message. Please try again.
-                </motion.div>
-              )}
             </form>
           </motion.div>
         </div>
-        
-        <motion.div 
+
+        <motion.div
           className="copyright"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2, duration: 0.8 }}
         >
-          <p>&copy; 2025 Bhanuprakash Peddi. All rights reserved.</p>
+          <p>&copy; 2025 Shaifali singh. All rights reserved.</p>
         </motion.div>
       </div>
     </motion.section>
