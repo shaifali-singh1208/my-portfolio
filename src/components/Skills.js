@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaJs, FaCss3Alt, FaDatabase, FaGitAlt, FaJava, FaAws, FaGoogle, FaCuttlefish, FaCogs } from "react-icons/fa";
-import { SiSpringboot, SiMongodb, SiLaravel } from "react-icons/si";
+import { FaReact, FaNodeJs, FaJs, FaCss3Alt, FaDatabase, FaGitAlt, FaCuttlefish, FaCogs } from "react-icons/fa";
+import { SiMongodb, SiLaravel } from "react-icons/si";
 import "./Skills.css";
 
 const skills = [

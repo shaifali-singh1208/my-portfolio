@@ -8,12 +8,10 @@ import profileImage from "../styles/img.jpeg"; // Update with your image path
 const Home = () => {
   const textRef = useRef(null);
   const circlesRef = useRef([]);
-  const arrowRef = useRef(null);
+  const arrowRef = useRef(null);  
   const [showConnectPopup, setShowConnectPopup] = useState(false);
 
-  const handleConnectClick = () => {
-    setShowConnectPopup(true);
-  };
+
 
   const closePopup = () => {
     setShowConnectPopup(false);
