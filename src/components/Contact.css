@@ -522,3 +522,11 @@
     align-self: stretch;
   }
 }
+.status-message {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+.status-message.success { color: #00f0ff; }
+.status-message.error { color: #ff4444; }

@@ -38,7 +38,7 @@ const Contact = () => {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         form.current,
-        EMAILJS_PUBLIC_KEY
+        EMAILJS_PUBLIC_KEY,
       );
 
       console.log("Email sent successfully:", result.text);
@@ -301,6 +301,25 @@ const Contact = () => {
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </motion.button>
+
+              {submitStatus === "success" && (
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="status-message success"
+                >
+                  ✅ Message sent successfully!
+                </motion.p>
+              )}
+              {submitStatus === "error" && (
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="status-message error"
+                >
+                  ❌ Something went wrong. Please try again.
+                </motion.p>
+              )}
             </form>
           </motion.div>
         </div>
